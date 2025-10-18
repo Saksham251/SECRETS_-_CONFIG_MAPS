@@ -5,15 +5,26 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchlabels:
+    matchLabels:
       app:  app-backend
   template:
     metadata:
       labels:
         app: app-backend
     spec:
-      name: app-backend
-      image: saksham251/app-backend:latest
       containers:
+      - name: app-backend
+        image: saksham251/app-backend:latest
         ports:
         - containerPort: 80
+        env:
+          - name: PORT
+            valueFrom:
+              configMapKeyRef:
+                name: backend-config
+                key: port
+          - name: DATABASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: backend-secret
+                key: database_url
