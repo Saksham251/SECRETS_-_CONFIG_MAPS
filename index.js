@@ -1,6 +1,7 @@
 import express from "express";
 
 const app = express();
+console.log("Running");
 
 app.get("/",(req,res)=>{
     res.json({
@@ -10,5 +11,5 @@ app.get("/",(req,res)=>{
 });
 
 app.listen(process.env.PORT,()=>{
-    `Server is listening on PORT: ${process.env.PORT}`
+    console.log(`Server is listening on PORT: ${process.env.PORT}`);
 });

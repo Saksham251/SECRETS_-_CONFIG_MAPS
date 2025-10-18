@@ -1,16 +1,24 @@
 {
   "name": "backend",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Saksham251/SECRETS_-_CONFIG_MAPS#readme",
+  "bugs": {
+    "url": "https://github.com/Saksham251/SECRETS_-_CONFIG_MAPS/issues"
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saksham251/SECRETS_-_CONFIG_MAPS.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@types/express": "^5.0.3",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0"
   }
 }
